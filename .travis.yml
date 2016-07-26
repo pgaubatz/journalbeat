@@ -15,6 +15,7 @@ script:
   - cat ci/${DISTRO}.dockerfile.part ci/common.dockerfile.part > Dockerfile
   - docker build -t journalbeat-${DISTRO}-packaging .
   - docker run -v ${PWD}:/go/src/github.com/mheese/journalbeat:rw journalbeat-${DISTRO}-packaging
+  - ls -al
 
 deploy:
   skip_cleanup: true
