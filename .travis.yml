@@ -4,8 +4,9 @@ services:
   - docker
 
 env:
-  - DISTRO=centos
-  - DISTRO=fedora
+  #- DISTRO=centos
+  #- DISTRO=fedora
+  - DISTRO=debian
 
 install: true
 script:
