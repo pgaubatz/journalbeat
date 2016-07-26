@@ -4,8 +4,8 @@ services:
   - docker
 
 env:
-  #- DISTRO=centos
-  #- DISTRO=fedora
+  - DISTRO=centos
+  - DISTRO=fedora
   - DISTRO=debian
 
 install: true
@@ -23,7 +23,7 @@ deploy:
   api_key:
     secure: UeNKlmNF+sBqgpAFZsBkB5gUmyb5d58QCzmvg0Y6CYAr5p+1GAvMVMJDcesjdJ+yhzv6pnRB9wIb3PXTUfHE6hbiFkGedf85t44QeHy0IETRBBC/vUqDM3USXMqWh+lLqqdpaavpTcHIdcTiwepTx7sBRK3O1TJHcHubOpXFvNo3sGSOwO+OAGrtm+dRveliGEkdfJsX9KWRjtCrHlyfLtW1R7D8tctcdpS0PmvOQP7HxBxLweWuTyv56f32l2nbjn/chk9f4FoH4zsXk99EH/2bP0lxTA1lMXMUcEF4BALKD24x3DI+2ZaEfO6uaWz5ecpPvwFJ+C3FVl8wQYBGbkS9ZOu2ynG7X4JUWVITg4bCMwZx7sPO5m2rzBnpgYm0xHf4KCFFkForXygZWocmnkpMNa+ufIzIHVsuGbs5Xb9xOYGfTmgYgyxRhaQyzlogEiNnYyo6hlTnG3x75dJE+U6rc95XUGqN9mlGA9zZO/X31GRlCChjqR1tS5iNSsDr/KKlS2LvD/XgMuC0OIDyfhaEnZJbpgLondrlK159+UYzt39YrDiQ2S6qfpOSfJDvwWlas6Yp9mmvJm7b8VCcMFbABJ/mO1Mbs4Fa16Pm2qKKFPxTMRV7rfbZKtC3/2ZdIaTqkvw1EIBA5utcHnyTkFUL+UD5LiWSHhdmJ1VW0LQ=
   file:
-    - build/journalbeat-$DISTRO.tar.gz
+    - build/journalbeat-$TRAVIS_TAG-$DISTRO.tar.gz
   on:
     branch: ci-debian-test
     tags: true
