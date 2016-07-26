@@ -13,6 +13,4 @@ WORKDIR /go/src/github.com/mheese/journalbeat
 CMD . ${GIMME_ENV_PREFIX}/go1.6.2.env \
   && go get -d -v ./... \
   && go test . ./beat \
-  && go build . \
-  && tar -cvf build/journalbeat-${DISTRO}.tar.gz journalbeat \
-  && chmod 0666 build/journalbeat-${DISTRO}.tar.gz
+  && go build .
