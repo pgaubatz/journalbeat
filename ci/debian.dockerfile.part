@@ -3,4 +3,4 @@ MAINTAINER mheese
 
 ENV DISTRO debian
 
-RUN apt-get update && apt-get install -y pkg-config libsystemd-dev git gcc
+RUN apt-get update && apt-get install -y pkg-config libsystemd-dev git gcc curl
