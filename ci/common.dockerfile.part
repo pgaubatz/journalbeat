@@ -14,4 +14,4 @@ CMD . ${GIMME_ENV_PREFIX}/go1.6.2.env \
   && go get -d -v ./... \
   && go test . ./beat \
   && go build . \
-  && chmod 0666 journalbeat
+  && chmod 0755 journalbeat
